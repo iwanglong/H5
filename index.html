@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>仅供王龙点击使用</title>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>smarth5</title>
+    <script>
+      (function () {
+        var baseFontSize = 100;
+        var baseWidth = 375;
+        var set = function () {
+          var clientWidth = document.documentElement.clientWidth || window.innerWidth;
+          var rem = 100;
+          if (clientWidth != baseWidth) {
+            rem = Math.floor(clientWidth / baseWidth * baseFontSize);
+          }
+          document.querySelector('html').style.fontSize = rem + 'px';
+        }
+        set();
+        window.addEventListener('resize', set);
+      }());
+    </script>
+  </head>
+  <body>
+     <button style="border-radius:10px; width: 2rem;height:0.5rem;background: red;color:#fff" onclick="verify()">仅供王龙点击使用</button>
+    <script>
+     function verify(){
+         console.log("对大龙点击了");
+        window.location.href = "openapp.jdmobile://virtual?params={"category":"jump","des":"jdreactcommon","modulename":"JDReactOnTrialChannel","appname":"JDReactOnTrialChannel","ishidden":true,"param":{"index":1,"hello":2}}"
+     }
+    </script>
+  </body>
+</html>
